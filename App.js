@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, Alert } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
+import DisplayToDo from './Components/ToDo/ToDoContainer';
 
 export default class App extends React.Component {
   constructor(){
@@ -11,7 +11,8 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Hello World!</Text>
+        <Text style={styles.heading}>Projects</Text>
+        <DisplayToDo />
       </View>
     );
   }
@@ -22,6 +23,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center"
+    marginTop: 50
+  },
+  heading: {
+    color: "indigo",
+    fontSize: 50
   }
 });
